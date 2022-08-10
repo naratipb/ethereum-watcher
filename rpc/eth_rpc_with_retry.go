@@ -1,8 +1,9 @@
 package rpc
 
 import (
-	"github.com/HydroProtocol/ethereum-watcher/blockchain"
 	"time"
+
+	"github.com/HydroProtocol/ethereum-watcher/blockchain"
 )
 
 type EthBlockChainRPCWithRetry struct {

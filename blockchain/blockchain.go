@@ -3,12 +3,13 @@ package blockchain
 import (
 	"errors"
 	"fmt"
+	"math/big"
+	"strconv"
+
 	"github.com/HydroProtocol/ethereum-watcher/utils"
 	"github.com/labstack/gommon/log"
 	"github.com/onrik/ethrpc"
 	"github.com/shopspring/decimal"
-	"math/big"
-	"strconv"
 )
 
 type BlockChain interface {
@@ -101,38 +102,38 @@ func (block *EthereumBlock) Timestamp() uint64 {
 }
 
 type EthereumTransaction struct {
-	*ethrpc.Transaction
+	transaction *ethrpc.Transaction
 }
 
 func (t *EthereumTransaction) GetBlockHash() string {
-	return t.BlockHash
+	return t.transaction.BlockHash
 }
 
 func (t *EthereumTransaction) GetFrom() string {
-	return t.From
+	return t.transaction.From
 }
 
 func (t *EthereumTransaction) GetGas() int {
-	return t.Gas
+	return t.transaction.Gas
 }
 
 func (t *EthereumTransaction) GetGasPrice() big.Int {
-	return t.GasPrice
+	return t.transaction.GasPrice
 }
 
 func (t *EthereumTransaction) GetValue() big.Int {
-	return t.Value
+	return t.transaction.Value
 }
 
 func (t *EthereumTransaction) GetTo() string {
-	return t.To
+	return t.transaction.To
 }
 
 func (t *EthereumTransaction) GetHash() string {
-	return t.Hash
+	return t.transaction.Hash
 }
 func (t *EthereumTransaction) GetBlockNumber() uint64 {
-	return uint64(*t.BlockNumber)
+	return uint64(*t.transaction.BlockNumber)
 }
 
 type EthereumTransactionReceipt struct {
@@ -161,7 +162,9 @@ func (r *EthereumTransactionReceipt) GetResult() bool {
 func (r *EthereumTransactionReceipt) GetBlockNumber() uint64 {
 	return uint64(r.BlockNumber)
 }
-
+func (r *EthereumTransactionReceipt) GetGasUsed() int {
+	return int(r.GasUsed)
+}
 func (r *EthereumTransactionReceipt) GetBlockHash() string {
 	return r.BlockHash
 }
