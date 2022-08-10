@@ -3,7 +3,7 @@ package plugin
 import (
 	"strings"
 
-	"github.com/HydroProtocol/ethereum-watcher/structs"
+	"github.com/naratipb/ethereum-watcher/structs"
 )
 
 type IReceiptLogPlugin interface {

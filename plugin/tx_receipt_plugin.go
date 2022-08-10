@@ -3,8 +3,8 @@ package plugin
 import (
 	"math/big"
 
-	"github.com/HydroProtocol/ethereum-watcher/blockchain"
-	"github.com/HydroProtocol/ethereum-watcher/structs"
+	"github.com/naratipb/ethereum-watcher/blockchain"
+	"github.com/naratipb/ethereum-watcher/structs"
 	"github.com/shopspring/decimal"
 )
 

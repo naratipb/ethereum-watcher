@@ -3,11 +3,12 @@ package ethereum_watcher
 import (
 	"context"
 	"fmt"
-	"github.com/HydroProtocol/ethereum-watcher/blockchain"
-	"github.com/HydroProtocol/ethereum-watcher/rpc"
-	"github.com/sirupsen/logrus"
 	"sync"
 	"time"
+
+	"github.com/naratipb/ethereum-watcher/blockchain"
+	"github.com/naratipb/ethereum-watcher/rpc"
+	"github.com/sirupsen/logrus"
 )
 
 type ReceiptLogWatcher struct {

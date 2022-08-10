@@ -4,7 +4,7 @@ import (
 	"errors"
 	"strconv"
 
-	"github.com/HydroProtocol/ethereum-watcher/blockchain"
+	"github.com/naratipb/ethereum-watcher/blockchain"
 	"github.com/onrik/ethrpc"
 	"github.com/sirupsen/logrus"
 )

@@ -6,10 +6,10 @@ import (
 	"os"
 	"os/signal"
 
-	ethereum_watcher "github.com/HydroProtocol/ethereum-watcher"
-	"github.com/HydroProtocol/ethereum-watcher/blockchain"
-	"github.com/HydroProtocol/ethereum-watcher/plugin"
-	"github.com/HydroProtocol/ethereum-watcher/rpc"
+	ethereum_watcher "github.com/naratipb/ethereum-watcher"
+	"github.com/naratipb/ethereum-watcher/blockchain"
+	"github.com/naratipb/ethereum-watcher/plugin"
+	"github.com/naratipb/ethereum-watcher/rpc"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )

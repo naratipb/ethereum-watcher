@@ -2,10 +2,11 @@ package ethereum_watcher
 
 import (
 	"context"
-	"github.com/HydroProtocol/ethereum-watcher/plugin"
-	"github.com/HydroProtocol/ethereum-watcher/structs"
-	"github.com/sirupsen/logrus"
 	"testing"
+
+	"github.com/naratipb/ethereum-watcher/plugin"
+	"github.com/naratipb/ethereum-watcher/structs"
+	"github.com/sirupsen/logrus"
 )
 
 func TestNewBlockNumPlugin(t *testing.T) {

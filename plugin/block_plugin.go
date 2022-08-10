@@ -1,7 +1,7 @@
 package plugin
 
 import (
-	"github.com/HydroProtocol/ethereum-watcher/structs"
+	"github.com/naratipb/ethereum-watcher/structs"
 )
 
 type IBlockPlugin interface {
