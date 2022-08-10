@@ -17,12 +17,12 @@ import (
 func TestTxReceiptPlugin(t *testing.T) {
 	log.SetLevel(log.DEBUG)
 
-	api := "https://mainnet.infura.io/v3/19d753b2600445e292d54b1ef58d4df4"
+	api := "https://rpc.bitkubchain.com"
 	w := NewHttpBasedEthWatcher(context.Background(), api)
 
 	w.RegisterTxReceiptPlugin(plugin.NewTxReceiptPlugin(func(txAndReceipt *structs.RemovableTxAndReceipt) {
 		if txAndReceipt.IsRemoved {
-			fmt.Println("Removed >>", txAndReceipt.Tx.GetHash(), txAndReceipt.Receipt.GetTxIndex())
+			fmt.Println("Removed >>", txAndReceipt.Tx.GetHash(), txAndReceipt.Receipt.GetTxIndex(), txAndReceipt.Receipt.GetGasUsed())
 		} else {
 			fmt.Println("Adding >>", txAndReceipt.Tx.GetHash(), txAndReceipt.Receipt.GetTxIndex())
 		}

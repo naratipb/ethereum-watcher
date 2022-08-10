@@ -47,11 +47,10 @@ type Transaction interface {
 type TransactionReceipt interface {
 	GetResult() bool
 	GetBlockNumber() uint64
-
 	GetBlockHash() string
 	GetTxHash() string
 	GetTxIndex() int
-
+	GetGasUsed() uint64
 	GetLogs() []IReceiptLog
 }
 
@@ -162,9 +161,10 @@ func (r *EthereumTransactionReceipt) GetResult() bool {
 func (r *EthereumTransactionReceipt) GetBlockNumber() uint64 {
 	return uint64(r.BlockNumber)
 }
-func (r *EthereumTransactionReceipt) GetGasUsed() int {
-	return int(r.GasUsed)
+func (r *EthereumTransactionReceipt) GetGasUsed() uint64 {
+	return uint64(r.GasUsed)
 }
+
 func (r *EthereumTransactionReceipt) GetBlockHash() string {
 	return r.BlockHash
 }

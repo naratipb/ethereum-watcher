@@ -3,7 +3,6 @@ module github.com/naratipb/ethereum-watcher
 go 1.16
 
 require (
-	github.com/HydroProtocol/ethereum-watcher v0.6.0
 	github.com/btcsuite/btcd v0.0.0-20190115013929-ed77733ec07d
 	github.com/jarcoal/httpmock v1.0.4 // indirect
 	github.com/labstack/gommon v0.2.8
